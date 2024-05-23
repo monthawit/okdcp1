@@ -12,7 +12,23 @@ rules:
       - patch
       - delete
     apiGroups:
-      - opstreelabs.in  # mongodb api for mongo operator
+      - minio.min.io
+      - job.min.io
+      - sts.min.io
+    resources:
+      - tenants
+      - miniojobs
+      - policybindings
+  - verbs:
+      - create
+      - update
+      - get
+      - list
+      - watch
+      - patch
+      - delete
+    apiGroups:
+      - opstreelabs.in
     resources:
       - mongodbs
       - mongodbclusters
@@ -42,16 +58,17 @@ rules:
     resources:
       - devworkspaces
   - verbs:
-      - create
-      - update
-      - patch
-      - delete
+      - get
+      - list
+      - watch
     apiGroups:
       - operators.coreos.com
     resources:
       - subscriptions
   - verbs:
-      - delete
+      - get
+      - list
+      - watch
     apiGroups:
       - operators.coreos.com
     resources:
