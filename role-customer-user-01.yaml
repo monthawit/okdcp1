@@ -12,6 +12,20 @@ rules:
       - patch
       - delete
     apiGroups:
+      - cert-manager.io
+    resources:
+      - issuers
+      - certificates
+      - certificaterequests
+  - verbs:
+      - create
+      - update
+      - get
+      - list
+      - watch
+      - patch
+      - delete
+    apiGroups:
       - minio.min.io
       - job.min.io
       - sts.min.io
