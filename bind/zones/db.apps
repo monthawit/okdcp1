@@ -1,0 +1,25 @@
+db.apps@       IN      SOA      okd417-bastion-01.okd417.olsdemo.com. admin.apps.okd417.olsdemo.com. (
+                 3         ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+; name servers - NS records
+    IN      NS       okd417-bastion-01.okd417.olsdemo.com.
+
+; name servers - A records
+okd417-bastion-01.okd417.olsdemo.com.          IN      A       10.151.0.79
+
+; 192.168.11.0/24 - A records
+;*.apps.         IN      A       192.168.11.11
+;*.apps.         IN      A       192.168.11.12
+;*.apps.         IN      A       192.168.11.13
+;*.apps.         IN      A       192.168.11.21
+;*.apps.         IN      A       192.168.11.22
+;*.apps.         IN      A       192.168.11.23
+;*.apps.         IN      A       192.168.11.24
+;*.apps.         IN      A       192.168.11.25
+;*.apps.         IN      A       192.168.11.26
+;*.apps.         IN      A       192.168.11.27
+*.apps.         IN      A       10.151.0.90
