@@ -58,6 +58,8 @@ sudo nano /etc/exports
 
 ### Fedora CoreOS Images ### 
 
+* https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/38.20231027.3.2/x86_64/fedora-coreos-38.20231027.3.2-live.x86_64.iso
+
 * https://builds.coreos.fedoraproject.org/prod/streams/testing-devel/builds/38.20231104.20.0/x86_64/fedora-coreos-38.20231104.20.0-live.x86_64.iso
 
 ### OKD Release ### 
