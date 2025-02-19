@@ -51,6 +51,16 @@ sudo nano /etc/exports
 ```
 
 ## oc install command ##
+
+### Fedora CoreOS Images ### 
+
+* https://builds.coreos.fedoraproject.org/prod/streams/testing-devel/builds/38.20231104.20.0/x86_64/fedora-coreos-38.20231104.20.0-live.x86_64.iso
+
+### OKD Release ### 
+
+* https://github.com/okd-project/okd/releases 
+  
+
 ```bash
 ssh-keygen -t rsa -b 4096 -N ''
 
