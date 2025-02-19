@@ -49,3 +49,21 @@ sudo nano /etc/exports
 /nfs    10.151.0.0/23(rw,sync,no_root_squash,no_subtree_check)
 
 ```
+
+## oc install command ##
+```bash
+ssh-keygen -t rsa -b 4096 -N ''
+
+openshift-install create manifests
+
+openshift-install create ignition-configs
+
+sudo coreos-installer install /dev/sda --ignition-file bootstrap.ign
+
+openshift-install wait-for bootstrap-complete --log-level=info
+
+openshift-install wait-for install-complete
+
+oc get csr --no-headers | awk '{print $1}' | xargs oc adm certificate approve
+
+```
