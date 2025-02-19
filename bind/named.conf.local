@@ -1,0 +1,37 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "okd417.olsdemo.com" {
+    type primary;
+    file "/etc/bind/zones/db.okd417.olsdemo.com"; # zone file path
+//    allow-transfer { 192.168.10.11; };  # ns2 private IP address - secondary
+};
+
+zone "0.151.10.in-addr.arpa" {
+    type primary;
+    file "/etc/bind/zones/db.10.151.0";  # 10.151.0.0/23 subnet
+//    allow-transfer { 192.168.10.11; };  # ns2 private IP address - secondary
+};
+
+//zone "11.168.192.in-addr.arpa" {
+//    type primary;
+//    file "/etc/bind/zones/db.10.151.0";  # 192.168.11.0/24 subnet
+//    allow-transfer { 192.168.10.11; };  # ns2 private IP address - secondary
+//};
+
+
+zone "apps" {
+    type primary;
+    file "/etc/bind/zones/db.apps";  # 192.168.10.0/24 subnet
+//    allow-transfer { 192.168.10.11; };  # ns2 private IP address - secondary
+};
+
+zone "apps.okd417.olsdemo.com" {
+        type master;
+        file "/etc/bind/zones/ext.zone";
+};
