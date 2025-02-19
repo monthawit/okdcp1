@@ -1,0 +1,33 @@
+$TTL    604800
+@       IN      SOA     okd417.olsdemo.com. admin.okd417.olsdemo.com. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; name servers
+      IN      NS      okd417-bastion-01.okd417.olsdemo.com.
+
+; PTR Records
+80              IN      PTR     api.okd417.olsdemo.com.            ; 192.168.11.10
+80              IN      PTR     api-int.okd417.olsdemo.com.            ; 192.168.11.10
+81              IN      PTR     etcd-0.okd417.olsdemo.com.         ; 192.168.11.11
+82              IN      PTR     etcd-1.okd417.olsdemo.com.         ; 192.168.11.12
+83              IN      PTR     etcd-2.okd417.olsdemo.com.         ; 192.168.11.13
+89             IN      PTR     bootstrap-01.okd417.olsdemo.com.           ; 192.168.11.29
+81              IN      PTR     master-01.okd417.olsdemo.com.      ; 192.168.11.11
+82              IN      PTR     master-02.okd417.olsdemo.com.      ; 192.168.11.12
+83              IN      PTR     master-03.okd417.olsdemo.com.      ; 192.168.11.13
+84              IN      PTR     worker-01.okd417.olsdemo.com.      ; 192.168.11.21
+85              IN      PTR     worker-02.okd417.olsdemo.com.      ; 192.168.11.22
+86              IN      PTR     worker-03.okd417.olsdemo.com.      ; 192.168.11.23
+87              IN      PTR     worker-04.okd417.olsdemo.com.      ; 192.168.11.24
+;25              IN      PTR     worker-05.cp1.openlandscape.cloud.      ; 192.168.11.25
+;26              IN      PTR     worker-06.cp1.openlandscape.cloud.      ; 192.168.11.26
+;27              IN      PTR     worker-07.cp1.openlandscape.cloud.      ; 192.168.11.27
+;51              IN      PTR     ceph-mon-01.cp1.openlandscape.cloud.      ; 192.168.11.51
+;52              IN      PTR     ceph-mon-02.cp1.openlandscape.cloud.      ; 192.168.11.52
+;53              IN      PTR     ceph-mon-03.cp1.openlandscape.cloud.      ; 192.168.11.53
+;81              IN      PTR     ceph-osd-01.cp1.openlandscape.cloud.      ; 192.168.11.81
+;82              IN      PTR     ceph-osd-02.cp1.openlandscape.cloud.      ; 192.168.11.82
+;83              IN      PTR     ceph-osd-03.cp1.openlandscape.cloud.      ; 192.168.11.83
