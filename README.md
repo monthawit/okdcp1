@@ -12,3 +12,34 @@ ClusterServiceVersion
 Uninstall Operator
 Edit Subscription
 
+## DNS server ## 
+
+sudo apt update
+sudo apt install bind9 bind9utils bind9-doc 
+systemctl enable named
+systemctl start named
+
+## Web Server ## 
+
+sudo apt update
+sudo apt install apache2 
+
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl status apache2
+
+root dir is /var/www/html 
+
+## NFS Server ## 
+
+sudo apt update
+sudo apt install nfs-kernel-server
+
+sudo mkdir /var/nfs/general -p
+chown nobody:nogroup /var/nfs/general
+
+
+sudo nano /etc/exports
+
+/var/nfs/general    client_ip(rw,sync,no_subtree_check)
+/home               client_ip(rw,sync,no_root_squash,no_subtree_check)
