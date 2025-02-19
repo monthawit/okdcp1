@@ -43,3 +43,4 @@ sudo nano /etc/exports
 
 /var/nfs/general    client_ip(rw,sync,no_subtree_check)
 /home               client_ip(rw,sync,no_root_squash,no_subtree_check)
+/nfs    10.151.0.0/23(rw,sync,no_root_squash,no_subtree_check)
