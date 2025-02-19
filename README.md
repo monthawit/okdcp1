@@ -52,6 +52,10 @@ sudo nano /etc/exports
 
 ## oc install command ##
 
+### Fedora CoreOS Version List ### 
+
+* https://builds.coreos.fedoraproject.org/browser 
+
 ### Fedora CoreOS Images ### 
 
 * https://builds.coreos.fedoraproject.org/prod/streams/testing-devel/builds/38.20231104.20.0/x86_64/fedora-coreos-38.20231104.20.0-live.x86_64.iso
