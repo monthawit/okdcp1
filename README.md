@@ -23,7 +23,7 @@ systemctl start named
 ```
 
 ## Web Server ## 
-
+```bash
 sudo apt update
 sudo apt install apache2 
 
@@ -32,9 +32,9 @@ sudo systemctl enable apache2
 sudo systemctl status apache2
 
 root dir is /var/www/html 
-
+```
 ## NFS Server ## 
-
+```bash
 sudo apt update
 sudo apt install nfs-kernel-server
 
@@ -47,3 +47,5 @@ sudo nano /etc/exports
 /var/nfs/general    client_ip(rw,sync,no_subtree_check)
 /home               client_ip(rw,sync,no_root_squash,no_subtree_check)
 /nfs    10.151.0.0/23(rw,sync,no_root_squash,no_subtree_check)
+
+```
