@@ -1,0 +1,23 @@
+apiVersion: v1
+baseDomain: olsdemo.com 
+compute: 
+- hyperthreading: Enabled 
+  name: worker
+  replicas: 0 
+controlPlane: 
+  hyperthreading: Enabled 
+  name: master
+  replicas: 3 
+metadata:
+  name: okd417
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14 
+    hostPrefix: 23 
+  networkType: OVNKubernetes 
+  serviceNetwork: 
+  - 172.30.0.0/16
+platform:
+  none: {} 
+pullSecret: '{"auths":{"fake":{"auth":"aWQ6cGFzcwo="}}}' 
+sshKey: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILJgnVz20KiQhMtQuSKOltOAWPmJbtNPz26Z5NDGn6F8 root@okd417-bastion-01'
