@@ -64,6 +64,8 @@ sudo nano /etc/exports
 
 ### OKD Release ### 
 
+* Replace Master Node https://access.redhat.com/articles/6270901 
+
 * https://github.com/okd-project/okd/releases 
   
 
