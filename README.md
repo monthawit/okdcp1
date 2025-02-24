@@ -88,4 +88,7 @@ oc get csr --no-headers | awk '{print $1}' | xargs oc adm certificate approve
 oc adm policy add-scc-to-user anyuid -z default -n YOUR_NAMESPACE,or_project_name
 
 oc adm policy add-scc-to-group anyuid system:authenticated
+
+oc extract -n openshift-machine-api secret/master-user-data-managed --keys=userData --to=- > master.ign
+
 ```
