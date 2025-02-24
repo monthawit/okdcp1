@@ -91,4 +91,5 @@ oc adm policy add-scc-to-group anyuid system:authenticated
 
 oc extract -n openshift-machine-api secret/master-user-data-managed --keys=userData --to=- > master.ign
 
+oc extract -n openshift-machine-api secret/worker-user-data-managed --keys=userData --to=- > worker.ign
 ```
