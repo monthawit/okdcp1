@@ -499,6 +499,7 @@ rules:
       - routes
   - verbs:
       - create
+      - update  
     apiGroups:
       - ''
       - route.openshift.io
