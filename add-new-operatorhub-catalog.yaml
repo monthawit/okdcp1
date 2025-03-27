@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: community-operators-operatorhub
+  namespace: openshift-marketplace
+spec:
+  sourceType: grpc
+  image: quay.io/operatorhubio/catalog:latest
+  displayName: Community Operators from Operatorhub
+  publisher: OperatorHub.io
+  updateStrategy:
+    registryPoll:
+      interval: 30m
