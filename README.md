@@ -93,3 +93,18 @@ oc extract -n openshift-machine-api secret/master-user-data-managed --keys=userD
 
 oc extract -n openshift-machine-api secret/worker-user-data-managed --keys=userData --to=- > worker.ign
 ```
+
+## OKD Extend POD Per Node ##
+```yaml
+apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: increase-max-pods
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: high-density
+  kubeletConfig:
+    maxPods: 500
+```
+oc label machineconfigpool worker custom-kubelet=high-density
