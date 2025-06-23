@@ -117,3 +117,20 @@ oc label machineconfigpool worker custom-kubelet=high-density
 oc adm node-logs <master-node> --path=kube-apiserver/audit.log
 
 oc adm node-logs --role=master --path=kube-apiserver/audit.log | grep username
+
+
+=========================
+
+Restart CephFS
+
+ceph fs status
+ceph orch ps --daemon-type=mds
+ceph orch daemon restart mds.myfs.xxxxxx
+
+Restart OSD 
+
+ceph osd tree
+ceph osd status
+ceph orch daemon restart osd.ไอดีของos
+
+==============================
