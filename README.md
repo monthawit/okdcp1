@@ -108,3 +108,12 @@ spec:
     maxPods: 500
 ```
 oc label machineconfigpool worker custom-kubelet=high-density
+
+
+==========================
+
+## see node log
+
+oc adm node-logs <master-node> --path=kube-apiserver/audit.log
+
+oc adm node-logs --role=master --path=kube-apiserver/audit.log | grep username
